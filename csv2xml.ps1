@@ -26,6 +26,9 @@ Group-Object Id -ov grp | ForEach-Object {
 
 Write-Output "Out:", $contacts
 
+$ExecutionContext.InvokeCommand.ExpandString($docTemplate) | 
+  Set-Content -LiteralPath ./Data/out-file.xml
+
 
 
 #  $contacts = foreach ($Phone in $_.Group) {
