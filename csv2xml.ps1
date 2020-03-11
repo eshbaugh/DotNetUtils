@@ -1,7 +1,8 @@
 
-
+# Format output row as ...
+#  <contact firstname="Bob" lastname="Smith" email="Bobs@email.com" Phone="1111" room="Suite 101" id="1"/>
 $entryTemplate = @'
-Firstname ="$($row.Group.Firstname)" Lastname= "$($row.Group.Lastname)"
+firstname="$($row.Group.Firstname)" lastname="$($row.Group.Lastname)" email="$($row.Group.Email)" phone="$($row.Group.Phone)" room="$($row.Group.Room)" id="$($row.Group.id)"
 '@
 
 $docTemplate = @'
